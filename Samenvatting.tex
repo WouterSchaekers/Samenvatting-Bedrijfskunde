@@ -680,7 +680,7 @@ Hoe gevoelig is dit resultaat aan een afwijking op de optimale hoeveelheid, bijv
 \begin{center}
 $\cfrac{C(aq^*)}{C(q^*)} = \cfrac{a^2+1}{2a}$
 \end{center}
-Het is dus beter om niet meer te bestellen dan iets minder.\\
+Het is dus beter om iets meer te bestellen dan iets minder.\\
 Leer dit niet van buiten! Alles is makkelijk af te leiden uit de formule van de totale bestelkost.
 \subsubsection{Stochastisch voorraadbeheer}
 De vraag is niet altijd gelijk en deterministisch. Vandaar: extra voorraad!\\
@@ -801,12 +801,14 @@ Hoe groter het aantal stations, hoe groter de storingsgevoeligheid. De oplossing
 Alle stations moeten ongeveer hetzelfde hoeveelheid werk verrichten.\\*
 De tijd nodig om het werk toegewezen aan een bepaald station te be\"eindigen is de servicetijd of stationtijd. De tijd beschikbaar in elk station is de cyclustijd; deze tijd is gelijk aan de grootste stationtijd die in de lijn optreedt. De dode tijd is dus de cyclustijd min de stationtijd. Het balanceringsprobleem bestaat erin de dode tijd te minimaliseren door de stationtijden op elkaar af te stemmen.\\*
 Indien er stationtijden zijn die de cyclustijd overschrijden, zullen taken parallel moeten lopen. Dit komt erop neer dat twee of meer stations parallel worden geplaatst in een zeker punt van de seri\"ele lijn.\\
-Indien er slechts \'e\'en product op de lijn wordt bewerkt, speerkt men van single-model line balancing. Indien het gaat over meerdere producten, gaat het over een mixed-model line balancing problem.
+Indien er slechts \'e\'en product op de lijn wordt bewerkt, spreekt men van single-model line balancing. Indien het gaat over meerdere producten, gaat het over een mixed-model line balancing problem.
 \subsubsection{Voorbeeld van een balanceringsprobleem}
-Zie figuur 4.3, blz 73 voor een voorbeeld. Het lijkt erop dat je random dingen kan samennemen en herschikken. Je kan bij wijze van spreken zoveel arbeiders inzetten als je wil, tot het aantal stuks per uur overeenkomt met de input (in dit voorbeeld 30, wat met 6 arbeiders kan bereikt worden).
+Zie figuur 4.3, blz 73 voor een voorbeeld. Het lijkt erop dat je random dingen kan samennemen en herschikken. Je kan bij wijze van spreken werk verplaatsen tussen stations onderling, tot het aantal stuks output per uur overeenkomt met de input. \\*
+In dit voorbeeld kunnen we van 4 stations naar 3 gaan. We ontslaan eerst \'e\'en van de twee arbeiders van het eerste station. De arbeider die er met de schrik vanaf komt, heeft dan dubbel werk. Echter, hij is tevreden dat hij zijn job nog mag houden, dus over het algemeen genomen is hij nog wel blij. De middelste arbeider is nog wat lui, in vergelijking met de meest rechtse arbeider en de angstige arbeider van het eerste station. We geven de luierik wat meer werk om de ijverige/slome werker van het laatste station wat te ontlasten.\\*
+Het resultaat is dat elk station 4 minuten werk heeft en we dus 15 stuks per uur kunnen produceren i.p.v. 12. Bovendien hebben we minder loonkosten nu!
 \subsection{De celstructuur (grouplay-out)}
 Gelijkaardige producten groeperen om zo voordeel te halen uit overeenkomsten inzake productontwerp en uit te voeren bewerkingen. Zie figuur 4.4, blz 74 voor een visualisatie.\\
-Bij de celproductie ligt de klemtoon op vari\"eteit
+Bij de celproductie ligt de klemtoon op vari\"eteit.
 \subsection{Structuur gekenmerkt door een vast product}
 \textit{If the mountain will not come to Mahomet, Mahomet must go to the mountain.}\\
 Zware producten kunnen soms niet verplaatst worden en het product zelf blijft op zijn plaats. (woningbouw, scheepsindustrie, vliegtuigindustrie, \dots)
@@ -851,9 +853,9 @@ Hoe meer gezeverd wordt, hoe beter.
 \textit{sellers-market}: De klant kocht wat hem werd voorgeschoteld\\*
 \textit{buyers-market}: De klant wordt kieskeurig, explosie van de dienstensector
 \subsection{Van eindcontrole naar kwaliteitsmanagement}
-\subsubsection{Fitness to standars}
+\subsubsection{Fitness to standards}
 De klant wordt veeleisender. Kwaliteit wordt een \textit{competitive advantage}, maar ook een extra kost voor de klant.\\
-\textit{shadow factory}: Het productieproces wordt nog eens overgedaan om slechte producten te herstellen.
+\textit{Shadow factory}: Het productieproces wordt nog eens overgedaan om slechte producten te herstellen.
 \subsubsection{Fitness to use}
 Buyers markt.
 \subsubsection{Fitness to cost}
@@ -892,9 +894,9 @@ Het \textbf{Stroomdiagram (of flowchart)} zet de verschillende stappen van een p
 \textbf{Random en systematische variaties} zijn kleine schommelingen in het productieproces. Bijvoorbeeld lichte temperatuursvariaties, trillingen, \dots.\\
 De bedoeling van \textbf{SPC met controlekaarten} is in te grijpen voordat de slijtage de tolerantiegrenzen overschrijdt. Hiervoor worden de \textit{Shewhart-}kaar en de \textit{Cusum-}kaart gebruikt.\\*
 De Shewhart-kaart zal op regelmatige tijdstippen steekproeven nemen. Voor elke reeks wordt een gemiddelde genomen. De Cusum-kaart zal niet met de targetwaarde werken, maar de targetwaarde aftekken, zodat in normale omstandigheden de meetwaarde gemiddeld gelijk aan $0$ wordt. Vanaf wanneer een systematische afwijking optreedt, zal het cumulatief verschil een duidelijke trend tonen. Zie figuur 6.13 blz 107.\\*
-Waarom deze techniek hier wel gebruikt kan worden en bij de Shewhart-kaart niet is mij een compleet raadsel, aangezien beide technieken exact hetzelfde zijn.\\
+Deze techniek kan kunnen we bij Shewhart-kaarten ook wel wat gebruiken, maar omdat we daar telkens de \textit{gemiddelde} waarde van een aantal steekproeven in kaart brengen (pun intended), is het niet mogelijk om afwijkingen als gevolg van randomness te onderscheiden van afwijkingen ten gevolge van systematische fouten. Bij Cusum-kaarten gaat dat wel.\\
 \textbf{Procespotentiaalindex}: Klanten hebben een bepaalde eis. Deze eis ligt tussen een bepaalde tolerantiegrens, oftewel tolerantiebreedte (TB).\\*
-De procespotentiaalindex is $C_P = \cfrac{Tolerantiebreedte\ TB}{natuurlijke\ processpreiding}$, whatever de natuurlijke processpreiding may be.
+De procespotentiaalindex is $C_P = \cfrac{Tolerantiebreedte\ TB}{natuurlijke\ processpreiding}$. In het boek staat dat de natuurlijke processpreiding gelijk is aan $6 \sigma$, waarbij $\sigma$ de standaardafwijking is van de normale verdeling die de kwaliteit van het eindproduct voorstelt, zie figuur 6.14).
 \subsubsection{Kwaliteitskosten}
 \paragraph{Directe kosten}
 \begin{itemize}
